@@ -1,0 +1,233 @@
+:root {
+    --lila: rgb(217, 179, 255);
+    --lila2: rgb(179, 102, 255);
+    --negro: rgb(0 0 0);
+    --blanco: rgb(255 255 255);
+    --fondo: background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,0.8018557764902836) 0%, rgba(217,179,255,1) 100%);
+    --fuente1: 'Dancing Script', cursive;
+    --fuente2: 'Cormorant SC', serif;
+}
+html{
+	font-size: 62.5%;
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+body{
+    font-size: 1.6rem;
+    font-family: var(--fuente2);
+    background-color: var(--fondo);
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+/*  Globales    */
+.contenedor {
+    width: min(95%, 120rem);
+    margin: 0 auto
+}
+.centrar-texto {
+    text-align: center;
+}
+a {
+    font-size: 2.5rem;
+    color: var(--negro);
+    text-decoration: none;
+    font-weight: bold;
+}
+h1 {
+    font-size: 6rem;
+    font-family: var(--fuente1);
+    font-weight: 300;
+    margin: 0 0 1.5rem 0;
+}
+h3 {
+    font-size: 3.5rem;
+    margin: 2rem 0;
+}
+
+.producto li, p {
+    font-size: 2rem;
+    color: var(--negro);
+    font-weight: bold;
+    margin: 1.5rem 0;
+}
+.btn {
+    background-color: var(--lila);
+    border: none;
+    border-radius: .5rem;
+    color: var(--blanco);
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 1rem;
+    text-align: center;
+    transition: background-color .3s ease-in-out;
+    margin: 2rem auto;
+}
+.btn:hover {
+    background-color: var(--lila2);
+    color: var(--blanco);
+    cursor: pointer;
+}
+
+/*      Header      */
+.logo img {
+    max-width: 15rem;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+.principal {
+    display: block;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+.nav-principal a{
+    display: block;
+    margin: 2.5rem 0;
+}
+@media (min-width: 768px) {
+    .principal {
+        display: flex;
+        justify-content: space-around;
+    }
+    .logo img {
+        max-width: 15rem;
+    }
+    .nav-principal,
+    .enlace {
+        display: flex;
+        align-items: center;
+    }
+    .enlace a {
+        margin: auto .5rem;
+    }
+}
+@media (min-width: 1140px) {
+    .enlace a {
+        margin: auto 3rem;
+    }
+}
+
+/***    subtitulo       **/
+.subtitulo {
+    display: flex;
+    justify-content: center;
+    margin: 4rem auto;
+}
+.subtitulo img {
+    max-width: 100%;
+}
+/*      Main        */
+
+.puntos li {
+    text-align: left;
+}
+.peluquero {
+    list-style: none;
+}
+.peluquero img {
+    margin: 2rem auto;
+}
+.producto p {
+    font-size: 3rem;
+}
+.puntos {
+    background-color: var(--lila);
+    border-radius: 1rem;
+    margin: 2rem 0;
+    padding: 2rem 2rem  2rem 4rem;
+}
+@media (min-width: 768px) {
+    .producto {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        align-items: center;
+    }
+}
+@media (min-width: 1140px) {
+    .producto {
+        align-items: center;
+    }
+}
+/*  Footer  */
+.footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+@media (min-width: 768px) {
+    .footer {
+        display: flex;
+        justify-content: center;
+        margin: 2rem auto;
+        gap: 4rem;
+    }
+}
+.face img,
+.whats img,
+.pin img,
+.domicilio img {
+    margin: 0 auto;
+}
+.derechos p {
+    color: var(--negro);
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+/***    Galeria     ***/
+.grid-img {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+    .grid-img {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/**     Cita    **/
+
+.formulario {
+    max-width: 60rem;
+    margin: 0 auto;
+    color: var(--negro);
+    font-weight: bold;
+}
+.formulario fieldset {
+    border: .1rem solid var(--negro);
+}
+.formulario legend {
+    text-align: center;
+    color: var(--blanco);
+    font-weight: bold;
+    padding: .5rem;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    background-color: var(--lila2);
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+}
+.campo label {
+    flex-basis: 10rem;
+}
+.campo input,
+textarea {
+    flex: 1;
+    border: .1rem solid #e1e1e1;
+    padding: 1rem;
+}
